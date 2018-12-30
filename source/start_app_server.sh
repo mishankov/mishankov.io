@@ -18,7 +18,7 @@ export DB_PATH
 python3 utils/init_db.py
 
 echo -e "${Info}Start ${Link}utils/data_agent.py${ResetLink} in background and save its PID to ${Link}data_agent_pid.txt${Reset}"
-nohup python3 utils/data_agent.py > LOGS/data_agent_nohup.out>&1 &
+nohup python3 utils/data_agent.py > LOGS/data_agent_nohup.log>&1 &
 echo $! > data_agent_pid.txt
 
 echo -e "${Start}Start application server at ${Link}http://${APP_HOST}:${APP_PORT}${ResetLink} with ${APP_WORKERS} workers${Reset}"
