@@ -1,17 +1,31 @@
 #!/bin/bash
 
-. ./output_style.config
+. /Users/mishankov/Documents/Git/mishankov.io/scripts/dev/output_style.config
 
-. ./app_server.config
+. /Users/mishankov/Documents/Git/mishankov.io/scripts/dev/app_server.config
+
+echo LOGGING_LEVEL
+
+echo -e "${Info}Set working directory ${Reset}"
+cd /Users/mishankov/Documents/Git/mishankov.io/source
 
 echo -e "${Info}Set LOGGING_LEVEL for dlogging to DEBUG${Reset}"
 export LOGGING_LEVEL
+
+echo -e "${Info}Create the virtual environment${Reset}"
+python3 -m venv venv
 
 echo -e "${Info}Activate the virtual environment${Reset}"
 . venv/bin/activate
 
 echo -e "${Info}Install or update python modules${Reset}"
 pip3 install --upgrade -r requirements.txt
+
+echo -e "${Info}Get latest dlogging module from git${Reset}"
+cd utils/
+rm -rf dlogging
+git clone https://github.com/mishankov/dlogging.git
+cd ../
 
 echo -e "${Info}Initialize data base ${Link}${DB_PATH}${ResetLink}${Reset}"
 export DB_PATH
