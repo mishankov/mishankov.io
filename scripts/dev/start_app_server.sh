@@ -38,7 +38,7 @@ nohup python3 utils/data_agent.py > LOGS/data_agent_nohup.log>&1 &
 echo $! > ${SCRIPTS_DIR}data_agent_pid.txt
 
 echo -e "${Start}Start application server at ${Link}http://${APP_HOST}:${APP_PORT}${ResetLink} with ${APP_WORKERS} workers${Reset}"
-gunicorn -b $APP_HOST:$APP_PORT -w=$APP_WORKERS wsgi:app
+gunicorn -b $APP_HOST:$APP_PORT -w=$APP_WORKERS -m 007 wsgi:app
 
 echo -e "${Info}Kill ${Link}utils/data_agent.py${ResetLink} background process and delete ${Link}data_agent_pid.txt${Reset}"
 kill -9 `cat ${SCRIPTS_DIR}data_agent_pid.txt`
