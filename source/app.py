@@ -6,7 +6,8 @@ from utils import dlogging as log
 
 app = Flask(__name__)
 
-DATABASE = os.getenv('DB_PATH', 'db/main.db')
+DB_PATH = os.getenv('DB_PATH', 'db/')
+DATABASE = DB_PATH + 'mishankovio.db'
 
 def get_db():
 	db = getattr(g, '_database', None)

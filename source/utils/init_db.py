@@ -2,10 +2,10 @@ import sqlite3
 import os
 import dlogging as log
 
-DB_PATH = os.getenv('DB_PATH', 'db/main.db')
+DB_PATH = os.getenv('DB_PATH', 'db/')
 
-log.info("Connect to data base {}".format(DB_PATH))
-conn = sqlite3.connect(DB_PATH)
+log.info("Connect to data base {}".format(DB_PATH + 'mishankovio.db'))
+conn = sqlite3.connect(DB_PATH + 'mishankovio.db')
 c = conn.cursor()
 
 log.info('Create EVENTS(datestamp TEXT, type TEXT, json_content TEXT) table')

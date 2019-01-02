@@ -7,9 +7,9 @@ import github_api
 
 
 while True:
-	DB_PATH = os.getenv('DB_PATH', 'db/main.db')
+	DB_PATH = os.getenv('DB_PATH', 'db/')
 
-	conn = sqlite3.connect(DB_PATH)
+	conn = sqlite3.connect(DB_PATH + 'mishankovio.db')
 	c = conn.cursor()
 
 	log.info('Get data from GitHub')

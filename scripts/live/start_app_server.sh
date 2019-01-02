@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PROJ_DIR=~/Documents/Git/mishankov.io/
-SCRIPTS_DIR=${PROJ_DIR}scripts/dev/
+PROJ_DIR=~/mishankov.io/
+SCRIPTS_DIR=${PROJ_DIR}scripts/live/
 
 . ${SCRIPTS_DIR}output_style.config
 
