@@ -1,15 +1,15 @@
 #!/bin/bash
 
-. /Users/mishankov/Documents/Git/mishankov.io/scripts/dev/output_style.config
+. ~/Documents/Git/mishankov.io/scripts/dev/output_style.config
 
-. /Users/mishankov/Documents/Git/mishankov.io/scripts/dev/app_server.config
+. ~/Documents/Git/mishankov.io/scripts/dev/app_server.config
 
 echo LOGGING_LEVEL
 
 echo -e "${Info}Set working directory ${Reset}"
 cd /Users/mishankov/Documents/Git/mishankov.io/source
 
-echo -e "${Info}Set LOGGING_LEVEL for dlogging to DEBUG${Reset}"
+echo -e "${Info}Set LOGGING_LEVEL for dlogging to ${LOGGING_LEVEL}${Reset}"
 export LOGGING_LEVEL
 
 echo -e "${Info}Create the virtual environment${Reset}"
