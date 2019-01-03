@@ -6,6 +6,8 @@ from utils import dlogging as log
 
 app = Flask(__name__)
 
+# databese connection
+
 DB_PATH = os.getenv('DB_PATH', 'db/')
 DATABASE = DB_PATH + 'mishankovio.db'
 
@@ -21,11 +23,7 @@ def close_connection(exception):
 	if db is not None:
 		db.close()
 
-@app.route('/')
-def index():
-	log.debug("Request for '/'")
-
-	return render_template('events.html')
+# APIs for frontend
 
 @app.route('/api/v1/events')
 def api_events():
@@ -41,3 +39,17 @@ def api_events():
 		data_json.append({'datetime': row[0], 'type': row[1], 'content': json.loads(row[2])})
 
 	return json.dumps(data_json)
+
+# user pages
+
+@app.route('/')
+def index():
+	log.debug("Request for '/'")
+
+	return render_template('homepage.html')
+
+@app.route('/feedwall')
+def feedwall():
+	log.debug("Request for '/feedwall'")
+
+	return render_template('events.html')

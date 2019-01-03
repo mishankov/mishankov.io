@@ -1,3 +1,86 @@
+/* Common styles */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+	scroll-behavior: smooth;
+}
+
+
+/* Home page styles */
+
+.hp-fullscreen {
+	height: 100%;
+}
+
+.hp-content {
+	display: grid;
+}
+
+.hp-aboutme {
+	background-color: #00FFFF;
+	height: 50%;
+}
+
+.hp-job {
+	background-color: #EF3124;
+}
+
+.hp-github {
+	background-color: #24292E;
+}
+
+.hp-instagram {
+	background-color: #3897F0;
+}
+
+.hp-soundcloud {
+	background-color: #FF5500;
+}
+
+.hp-soundcloud-content {
+	color: white;
+	max-width: 50%;
+	margin: auto;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 10px;
+	grid-row-gap: 15px;
+	grid-template-areas: 
+		"header header"
+		"frame text";
+}
+
+.hp-soundcloud-header {
+	grid-area: header;
+	margin: auto;
+}
+
+.hp-soundcloud-frame {
+	grid-area: frame;
+}
+
+.hp-soundcloud-text {
+	grid-area: text;
+}
+
+.hp-prefooter {
+	background: linear-gradient(180deg, #FF5500, #444444);
+	height: 50%;
+}
+
+.hp-footer {
+	background-color: #444444;
+	height: 100px;
+}
+
+/* Feed wall styles */
+
 .event {
 	color: white;
 	background-color: grey; 

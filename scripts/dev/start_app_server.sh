@@ -13,9 +13,6 @@ cd ${PROJ_DIR}source
 echo -e "${Info}Set LOGGING_LEVEL for dlogging to ${LOGGING_LEVEL}${Reset}"
 export LOGGING_LEVEL
 
-echo -e "${Info}Create the virtual environment${Reset}"
-python3 -m venv venv
-
 echo -e "${Info}Activate the virtual environment${Reset}"
 . venv/bin/activate
 
