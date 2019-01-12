@@ -2,7 +2,7 @@ import os
 import sqlite3
 import json
 from flask import Flask, render_template, g
-from utils import dlogging as log
+from utils.dlogging import dlogging as log
 
 app = Flask(__name__)
 

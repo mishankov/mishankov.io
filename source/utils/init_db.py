@@ -1,6 +1,6 @@
 import sqlite3
 import os
-import dlogging as log
+from dlogging import dlogging as log
 
 DB_PATH = os.getenv('DB_PATH', 'db/')
 

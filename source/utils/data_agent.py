@@ -2,7 +2,7 @@ import sqlite3
 import os
 import json
 import time
-import dlogging as log
+from dlogging import dlogging as log
 import github_api
 
 

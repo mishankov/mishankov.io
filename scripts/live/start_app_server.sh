@@ -24,7 +24,7 @@ pip3 install --upgrade -r requirements.txt
 
 echo -e "${Info}Get latest dlogging module from git${Reset}"
 cd utils/
-rm -rf dlogging
+sudo rm -rf dlogging
 git clone https://github.com/mishankov/dlogging.git
 cd ../
 
