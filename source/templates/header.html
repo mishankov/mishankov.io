@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset='utf-8'>
 	<title>Mishankov.io</title>
-	<link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='stylesheets/normalize.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='stylesheets/sakura/sakura-dark.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='stylesheets/style.css') }}" rel="stylesheet">
 </head>
 <body>
 {% block body %}

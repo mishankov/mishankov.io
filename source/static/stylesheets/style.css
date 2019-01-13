@@ -1,10 +1,5 @@
 /* Common styles */
 
-* {
-	padding: 0;
-	margin: 0;
-}
-
 html, body {
 	height: 100%;
 	scroll-behavior: smooth;
@@ -22,24 +17,47 @@ html, body {
 }
 
 .hp-aboutme {
-	background-color: #00FFFF;
-	height: 50%;
+	/*background-color: #00FFFF;*/
+/*	background-image: url(https://via.placeholder.com/728x90.png?text=Visit+WhoIsHostingThis.com);
+	background-attachment: fixed;*/
+	height: 30%;
+}
+
+.hp-aboutme-text {
+	margin: auto;
+	text-align: center;
+}
+
+.instagram-link {
+	color: #3897F0;
+}
+
+.soundcloud-link {
+	color: #FF5500;
 }
 
 .hp-job {
-	background-color: #EF3124;
+	/*background-color: #EF3124;*/
+}
+
+.hp-job-header {
+	color: #EF3124;
 }
 
 .hp-github {
-	background-color: #24292E;
+	/*background-color: #24292E;*/
 }
 
 .hp-instagram {
-	background-color: #3897F0;
+	/*background-color: #3897F0;*/
+}
+
+.hp-instagram-header {
+	color: #3897F0;
 }
 
 .hp-soundcloud {
-	background-color: #FF5500;
+	/*background-color: #FF5500;*/
 }
 
 .hp-soundcloud-content {
@@ -59,6 +77,7 @@ html, body {
 .hp-soundcloud-header {
 	grid-area: header;
 	margin: auto;
+	color: #FF5500;
 }
 
 .hp-soundcloud-frame {
@@ -75,7 +94,7 @@ html, body {
 }
 
 .hp-footer {
-	background-color: #444444;
+	/*background-color: #444444;*/
 	height: 100px;
 }
 
