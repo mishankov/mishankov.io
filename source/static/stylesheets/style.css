@@ -1,106 +1,187 @@
-/* Common styles */
-
-html, body {
-	height: 100%;
-	scroll-behavior: smooth;
+/* Shared
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button {
+  border-radius: 100px;
 }
 
-
-/* Home page styles */
-
-.hp-fullscreen {
-	height: 100%;
+.round-img {
+  border-radius: 50%;
 }
 
-.hp-content {
-	display: grid;
+.shadow {
+  box-shadow: 10px 10px 10px grey;
 }
 
-.hp-aboutme {
-	/*background-color: #00FFFF;*/
-/*	background-image: url(https://via.placeholder.com/728x90.png?text=Visit+WhoIsHostingThis.com);
-	background-attachment: fixed;*/
-	height: 30%;
+.github {
+  color: #24292e;
 }
 
-.hp-aboutme-text {
-	margin: auto;
-	text-align: center;
+.instagram {
+  color: #3897f0;
 }
 
-.instagram-link {
-	color: #3897F0;
+.soundcloud {
+  color: #ff5500;
 }
 
-.soundcloud-link {
-	color: #FF5500;
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
 }
 
-.hp-job {
-	/*background-color: #EF3124;*/
+/* Hero
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.phones {
+  position: relative;
+}
+.phone {
+  position: relative;
+  max-width: 80%;
+  margin: 3rem auto -12rem;
+}
+.phone + .phone {
+  display: none;
 }
 
-.hp-job-header {
-	color: #EF3124;
+.intro {
+  /*background-color: #1c1e24;*/
+
+/*  background:linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('../images/patterns/triangles.gif');
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: fixed;*/
+
+  /*color: #fff;*/
 }
 
-.hp-github {
-	/*background-color: #24292E;*/
+/* Quick links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.quicklinks {
+  /*background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(255,255,255,0.3)),url('../images/patterns/triangles.gif');*/
+  background:linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('../images/patterns/triangles.gif');
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  color: #fff;
+  padding-bottom: 5rem;
 }
 
-.hp-instagram {
-	/*background-color: #3897F0;*/
+.quicklinks-multiplier {
+  margin-bottom: .5rem;
 }
 
-.hp-instagram-header {
-	color: #3897F0;
+.quicklinks-heading {
+  margin-bottom: .3rem;
+}
+.quicklinks-description {
+  opacity: .8;
+  font-weight: 300;
 }
 
-.hp-soundcloud {
-	/*background-color: #FF5500;*/
+/* Help
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.get-help {
+  border-bottom: 1px solid #ddd;
 }
 
-.hp-soundcloud-content {
-	color: white;
-	max-width: 50%;
-	margin: auto;
-
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-column-gap: 10px;
-	grid-row-gap: 15px;
-	grid-template-areas: 
-		"header header"
-		"frame text";
+/* Categories
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.projects {
+  background-image: url('../images/values-bg.jpg');
+  /*background-image: url('{{ url_for('static', filename='images/values-bg.png') }}');*/
+  background-size: cover;
+  color: #fff;
+}
+.project .section-description { 
+  margin-bottom: 4rem;
 }
 
-.hp-soundcloud-header {
-	grid-area: header;
-	margin: auto;
-	color: #FF5500;
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .section {
+    padding: 12rem 0 11rem;
+  }
+  .hero {
+    padding-bottom: 12rem;
+    text-align: left;
+    height: 165px;
+  }
+  .phone {
+    position: absolute;
+    top: -7rem;
+    right: 3rem;
+    max-height: 362px;
+    z-index: 3;
+  }
+  .phone + .phone {
+    top: -6rem;
+    display: block;
+    max-width: 73.8%;
+    right: 0;
+    z-index: 2;
+    max-height: 338px;
+  }
+  .hero-heading {
+    font-size: 2.4rem;
+  }
 }
 
-.hp-soundcloud-frame {
-	grid-area: frame;
+/* Bigger than 750 */
+@media (min-width: 750px) {
+  .hero {
+    height: 190px;
+  }
+  .hero-heading {
+    font-size: 2.6rem;
+  }
+  .section {
+    padding: 14rem 0 15rem;
+  }
+  .hero {
+    padding: 16rem 0 14rem;
+  }
+  .section-description {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .phone {
+    top: -14rem;
+    right: 5rem;
+    max-height: 510px;
+  }
+  .phone + .phone {
+    top: -12rem;
+    max-height: 472px;
+  }
+  .categories {
+    padding: 15rem 0 8rem;
+  }
 }
 
-.hp-soundcloud-text {
-	grid-area: text;
-}
-
-.hp-prefooter {
-	background: linear-gradient(180deg, #FF5500, #444444);
-	height: 50%;
-}
-
-.hp-footer {
-	/*background-color: #444444;*/
-	height: 100px;
-}
-
-/* Feed wall styles */
-
-.event {
-	color: white;
-	background-color: grey; 
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+  .section {
+    padding: 20rem 0 19rem;
+  }
+  .hero {
+    padding: 22rem 0;
+  }
+  .hero-heading {
+    font-size: 3.0rem;
+  }
+  .phone {
+    top: -16rem;
+    max-height: 615px;
+  }
+  .phone + .phone {
+    top: -14rem;
+    max-height: 570px;
+  }
 }
